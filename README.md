@@ -11,17 +11,15 @@
 ![workflow](images/fig1.png)
 
 ## 實驗結果
-| 模型 | 論文 Log Loss | 我的實作 Log Loss |
-| :--- | :--- | :--- |
-| **Ensemble Model** | 0.13 | 0.26 |
+1. 觀察圖表，整體數據趨勢皆與論文相同，僅公式函數復刻時有落差導致數據不同
+2. 透過圖28可以達到參數alpha gamma最佳化
+![fig28](images/fig28.png)
+3.圖27強力證明作者的分數階創新
+![fig27](images/fig27.png)
+4.圖30如同作者的創新"分數階凱薩窗不只比傳統凱薩窗好"，還比其他種窗函數還好
+![fig30](images/fig30.png)
 
 ## 復盤與心得(Technical Highlights:)
-
-* **Deep Learning**: ResNet, Feature Extraction, Transfer Learning.
-
-* **Machine Learning**: XGBoost, Ensemble Learning.
-
-* **Data Processing**: SAR Image Pre-processing, Data Augmentation.
-
-* **Evaluation**: Log Loss, 5-Fold Cross Validation analysis.
- 
+* **$\gamma$ (Fractional Parameter)**：增加 $\gamma$ 會使窗函數變寬，但會提高波紋比 。
+* **$\alpha$ (Shape Parameter)**：增加 $\alpha$ 會使窗函數變窄，擴大過渡頻寬並增加阻帶衰減 。
+* **$N$ (Length)**：增加 $N$ 會得到更細緻的頻譜特徵 。
